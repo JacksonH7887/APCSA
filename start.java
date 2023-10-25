@@ -6,7 +6,7 @@ public class start {
             System.out.println("Size: " + test.size());
     
             for(int i = 0; i < test.size(); i++){
-    
+                test.add(i * 2);
             }
         }catch(IllegalArgumentException ex){
             System.out.println("That's Illegal");
