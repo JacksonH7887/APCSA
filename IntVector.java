@@ -72,18 +72,30 @@ public class IntVector{
     */
 
     public boolean add(int index, int value) {
-        int number = (rand.nextInt(1));
-        if(number == 0) return false;
-        else if(number == 1) return true;
-        else return false;
+        testBounds(index);
+        tryResize();
+        for(int i = size; i > index; i--){
+            arr[i] = arr[i-1];
+        }
+        arr[index] = value;
+        size++;
+        return true;
     }
     /**
     *Removes first instance of 'value' found in the list
     *Returns 'true' if value was successfully inserted, 'false' otherwise
     *@param value THe numerical value to be added
     */
-    public boolean remove(int valaue) {
-        
+    public boolean remove(int value) {
+        boolean a = false;
+        for(int i = 0; i < size - 1; i++){
+            if(arr[i] == value || a){
+                a = true;
+                arr[i] = arr[i+1];
+            }
+        }
+        if(a) size--;
+        return a;
     }
 
     @Override
