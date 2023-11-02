@@ -1,3 +1,4 @@
+package LinearStructures;
 import java.util.Random;
 public class IntVector{
 
