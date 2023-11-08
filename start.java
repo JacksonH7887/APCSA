@@ -2,19 +2,23 @@ import LinearStructures.ArrayList;
 
 public class start {
     public static void main(String[] arg){
-        LinearStructures.ArrayList<Integer> mine = new LinearStructures.ArrayList<Integer>();
+        LinearStructures.ArrayList<String> strings = new LinearStructures.ArrayList<>();
 
-        java.util.ArrayList<String> theirs = new java.util.ArrayList<String>();
+        java.util.ArrayList<Integer> nums = new java.util.ArrayList<Integer>();
 
-        System.out.println(mine);
-        mine.add(0, 1);
-        System.out.println(mine);
-        mine.add(50);
-        System.out.println(mine);
-        System.out.println(theirs);
-        theirs.add(0, "hi");
-        System.out.println(theirs);
-        theirs.add("hello");
-        System.out.println(theirs);
+        strings.add("Cat");
+        strings.add("Dog");
+        strings.add("Mouse");
+
+        nums.add(1);
+        nums.add(3);
+        nums.add(4);
+
+        System.out.println(strings);
+        System.out.println(nums);
+
+        for(String s : strings){
+            System.out.println(s);
+        }
 }   
 }
