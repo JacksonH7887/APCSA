@@ -49,7 +49,7 @@ public class LinkedList<E> {
     }
 
     public void addFirst(E e){
-        Node<E> NewNode = new Node<>(e);
+        Node<E> newNode = new Node<>(e);
         newNode.next = head;
         head = newNode;
         size++;
@@ -81,11 +81,31 @@ public class LinkedList<E> {
         }
     }
 
+    public void remove(int index){
+    
+    }
+
     public E getFirst(){
         if(size == 0) return null;
         return head.element;
     }
-    
+
+    public E lastIndexOf(){
+        return tail.element;
+    }
+
+
+
+    public Node<E> get(int index){
+        if(index < 0 || index > size) throw new IndexOutOfBoundsException();
+        Node<E>current = head;
+        for (int i = 0; i < index; i++){
+            current = current.next;
+        }
+        return current;
+    }
+
+
     private static class Node<E>{
         private E element;
         private Node<E> next;
